@@ -22,6 +22,6 @@ package src.e3_3;
         s1.m(v, h);  // Aufruf C
         s2.m(v, h);  // Aufruf D
         s1.m(h, fo); // Aufruf E
-        s1.m(h, h);  // Aufruf F
+       // s1.m(h, h);  // Aufruf F
     }
 }

@@ -7,5 +7,5 @@
  */
 package src.e3_3;
 
- class Huhn {
+ class Huhn extends Vogel{
 }
