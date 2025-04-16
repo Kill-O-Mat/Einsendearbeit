@@ -1,10 +1,8 @@
-package e4;
+package src.e3_4;
 
-public class Pinguin extends Tier {
-
-
+class Schmetterling extends Tier {
     public void druckeEigenschaften() {
-        super.setBeine(2);
+        super.setBeine(0);
         super.druckeEigenschaften();
     }
 }

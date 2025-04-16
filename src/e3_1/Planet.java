@@ -1,6 +1,6 @@
-package e3_1;
+package src.e3_1;
 
-public enum Planet {
+ enum Planet {
     JUPITER(30, 7785),
     MARS(50, 2279);
 

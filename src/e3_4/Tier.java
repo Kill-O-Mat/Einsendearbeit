@@ -1,6 +1,6 @@
-package e4;
+package src.e3_4;
 
-public abstract class Tier {
+abstract class Tier {
     private boolean isGefaehrlich = false;
     private int beine;
 

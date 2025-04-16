@@ -1,6 +1,6 @@
-package e3_1;
+package src.e3_1;
 
-public class PlanetTest {
+ class PlanetTest {
     public static void main(String[] args) {
         Planet p1 = Planet.MARS;
         Planet p2 = Planet.JUPITER;

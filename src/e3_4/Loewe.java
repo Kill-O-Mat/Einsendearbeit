@@ -1,6 +1,6 @@
-package e4;
+package src.e3_4;
 
-public class Loewe extends Tier {
+class Loewe extends Tier {
 
     private final int beine = 4;
 

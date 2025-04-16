@@ -5,9 +5,9 @@
  * @version 1.0
  * @created 16.04.2025
  */
-package e3_2;
+package src.e3_3;
 
-public class Sub {
+ class Sub {
     void m(Vogel v, Huhn h) {
         System.out.println("5");
     }
