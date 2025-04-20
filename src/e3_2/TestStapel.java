@@ -2,13 +2,14 @@ package src.e3_2;
 
 class TestStapel {
     public static void main(String[] args) {
-        Stapel s = new Stapel(3);
+        Stapel s = new Stapel(5);
         Person p1 = new Person("Kirk", 36);
         Person p2 = new Person("Pille", 43);
         Person p3 = new Person("Spok", 43);
         Person p4 = new Person("Uhura", 43);
         Person p5 = new Person("Scotty", 47);
-        //   System.out.println(p2);
+
+        //Elemente hinzufügen
         s.push(p2);
         s.add(p3, 0);
         s.push(p1);
@@ -27,7 +28,7 @@ class TestStapel {
         s.push(p4);
         s.push(p4);
         s.push(p4);
-        System.out.println(s);
+
         System.out.println();
         System.out.println("************************");
         System.out.println("Größe des Stapels: " + s.getSize());
@@ -45,6 +46,18 @@ class TestStapel {
 
         System.out.println();
         System.out.println("************************");
-        s.removeElementAt(1);
+        System.out.println("Entferne: " + s.removeElementAt(-1));
+
+        System.out.println();
+        System.out.println("************************");
+        System.out.println("Entferne: " + s.pop());
+
+        System.out.println();
+        System.out.println("************************");
+        System.out.println("Der Stapel ist " + ((s.isEmpty()) ? "" : "nicht ") + "leer.");
+
+        System.out.println();
+        System.out.println("************************");
+        System.out.println(s);
     }
 }

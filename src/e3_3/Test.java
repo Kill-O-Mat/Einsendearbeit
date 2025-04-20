@@ -2,12 +2,13 @@
  * Beschreibung der Klasse Test.
  *
  * @author Mathias
+ * @git https://github.com/Kill-O-Mat/Einsendearbeit2/tree/master/src/e3_3
  * @version 1.0
  * @created 16.04.2025
  */
 package src.e3_3;
 
- class Test {
+class Test {
     public static void main(String[] args) {
         Super s1 = new Super();
         Super s2 = new Sub();
@@ -22,6 +23,6 @@ package src.e3_3;
         s1.m(v, h);  // Aufruf C
         s2.m(v, h);  // Aufruf D
         s1.m(h, fo); // Aufruf E
-       // s1.m(h, h);  // Aufruf F
+        // s1.m(h, h);  // Aufruf F
     }
 }

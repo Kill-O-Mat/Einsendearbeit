@@ -8,6 +8,7 @@ class ListWithInternalArray {
     private int nextFreeIndex = 0;
 
     ListWithInternalArray(int initialCapcity) {
+        // Inistalisiere Stapel
         arrayList = new Object[(Math.max(initialCapcity, 1))];
         this.initialCapacity = initialCapcity;
     }
@@ -28,43 +29,48 @@ class ListWithInternalArray {
     // Fügt das übergebene Element an der angegebenen Position ein.
     // Die nachfolgenden Elemente verschieben sich nach hinten.
     public void add(Object elem, int index) {
+        // Prüfen, ob index in Range of arraList, ansonsten auf nextFreeIndex setzen
         if (index > this.nextFreeIndex) {
             System.out.println(index + " ist kein gültiger Index! Setze ihn auf: " + this.nextFreeIndex);
             index = this.nextFreeIndex;
         }
-        arrayList = copyArray(index);
-        arrayList[index] = elem;
+        // Array kopieren
+        this.arrayList = this.copyArray(index);
+        // Neues Element hinzufügen
+        this.arrayList[index] = elem;
+        // nächsten freien Index zählen
         this.nextFreeIndex++;
 
     }
 
     private Object[] copyArray(int index) {
-        Object[] cArray = new Object[arrayList.length + ((this.nextFreeIndex == arrayList.length) ? 3 : 1)];
+        // Kopie eines Arrays erstellen
+        Object[] cArray = new Object[this.arrayList.length + ((this.nextFreeIndex == this.arrayList.length) ? 3 : 1)];
         // Prüfen, ob es das erste Element ist, was auf den Stack gelegt wird
         if (index == 0 && this.nextFreeIndex == 0) {
+            // Leeres Array zurückgeben
             return cArray;
         }
 
-        // Prüfen, ob das element hinein getan wird oder auf den Stapel drauf kommt
+        // sollte der Index noch null sein - gib einfach das original Array zurück
         try {
-            if (arrayList[index] == null) return arrayList;
+            if (this.arrayList[index] == null) return this.arrayList;
         } catch (Exception _) {
-
         }
-        // Array kopieren, wenn in die mitte eingetragen wird
-        for (int i = 0; i < arrayList.length; i++) {
-            if (index == i) {
-                if (index != 0) {
-                    cArray[i] = null;
-                } else {
-                    cArray[i + 1] = arrayList[i];
-                    cArray[i] = null;
-                }
-            } else if (index < i) {
-                cArray[i] = arrayList[i - 1];
-            } else {
-                cArray[i] = arrayList[i];
+        // Array kopieren
+        for (int i = 0; i < this.arrayList.length; i++) {
+            if (index == 0) {
+                // fals in mitte und Platz belegt, erhöhe altes um 1 und trage Platzhalte für neues Element ein
+                cArray[i + 1] = this.arrayList[i];
             }
+            // in Mitte eintragen
+            if (index == i) {
+                // Sonderfall, es wird an erster Stelle eingetragen
+                cArray[i] = null;
+                // alle Werte vor dem neuen Element kopieren
+            }
+            // Alle Elemente nach dem index kopieren
+            cArray[i] = (index < i) ? this.arrayList[i - 1] : this.arrayList[i];
         }
         return cArray;
     }
@@ -77,8 +83,26 @@ class ListWithInternalArray {
     // Liefert eine Referenz auf das Element an der angegebenen Position und entfernt es
     // gleichzeitig aus der Liste.  Nachfolgende Elemente werden ggf. nach vorne verschoben.
     public Object removeElementAt(int index) {
+        index = (index < 0 || index > this.nextFreeIndex) ? 0 : index;
+        if (index != 0) index--;
         System.out.println("Entferne Element: " + arrayList[index] + " an Stelle: " + index + ".");
-        return new ListWithInternalArray(3);
+        Object returnVal = this.arrayList[index];
+        Object[] cp = new Object[this.arrayList.length];
+        for (int i = 0; i <= this.arrayList.length; i++) {
+            if (index > i) {
+                if (i == 0) {
+                    cp[i] = arrayList[i];
+                } else {
+                    cp[i - 1] = arrayList[i];
+                }
+            }
+            if (i <= this.nextFreeIndex - 1) {
+                cp[i] = arrayList[i + 1];
+            }
+        }
+        this.nextFreeIndex--;
+        arrayList = cp;
+        return returnVal;
     }
 
     // Liefert die Anzahl der Elemente in der Liste
