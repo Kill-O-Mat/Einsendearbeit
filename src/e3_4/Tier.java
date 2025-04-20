@@ -1,11 +1,13 @@
 package src.e3_4;
 
 abstract class Tier {
-    private boolean isGefaehrlich = false;
+    private boolean isGefaehrlich;
     private int beine;
 
 
-    protected Tier() {
+    protected Tier(boolean isGefaehrlich, int beine) {
+        this.isGefaehrlich = isGefaehrlich;
+        this.beine = beine;
     }
 
     private int getBeine() {
