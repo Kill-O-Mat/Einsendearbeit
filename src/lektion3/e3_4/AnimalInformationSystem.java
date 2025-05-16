@@ -1,6 +1,6 @@
 package src.e3_4;
 
- class AnimalInformationSystem {
+class AnimalInformationSystem {
     /*
      * Diese Methode liefert Informationen über die Eigenschaften eines Tiers. Dazu
      * muss der Name der Tier-Art als erster Parameter der Methode übergeben werden.

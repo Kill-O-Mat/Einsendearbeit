@@ -1,5 +1,5 @@
 /**
- * Beschreibung der Klasse Huhn.
+ * Beschreibung der Klasse Vogel.
  *
  * @author Mathias
  * @version 1.0
@@ -7,5 +7,5 @@
  */
 package src.e3_3;
 
- class Huhn extends Vogel{
+class Vogel extends Tier {
 }

@@ -1,4 +1,4 @@
-package src.e3_1;
+package lektion3.e3_1;
 
 enum Planet {
     JUPITER(30, 7785),

@@ -2,7 +2,7 @@
  * Beschreibung der Klasse Test.
  *
  * @author Mathias
- * @git https://github.com/Kill-O-Mat/Einsendearbeit2/tree/master/src/e3_3
+ * @git https://github.com/Kill-O-Mat/Einsendearbeit2/tree/master/src/lektion3.lektion3.e3_3
  * @version 1.0
  * @created 16.04.2025
  */

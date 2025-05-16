@@ -1,4 +1,4 @@
-package src.e3_2;
+package lektion3.e3_2;
 
 import java.util.Arrays;
 

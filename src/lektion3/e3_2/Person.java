@@ -1,8 +1,8 @@
-package src.e3_2;
+package lektion3.e3_2;
 
 public class Person {
-    private String name;
-    private int age;
+    private final String name;
+    private final int age;
 
     Person(String name, int age) {
         this.age = age;
@@ -16,6 +16,7 @@ public class Person {
     public int getAge() {
         return this.age;
     }
+
     @Override
     public String toString() {
         return "Der Name lautet: " + getName() + " und ist " + getAge() + " Jahre alt.";

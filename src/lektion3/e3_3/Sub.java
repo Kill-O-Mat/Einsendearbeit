@@ -7,7 +7,7 @@
  */
 package src.e3_3;
 
- class Sub extends Super {
+class Sub extends Super {
     void m(Vogel v, Huhn h) {
         System.out.println("5");
     }

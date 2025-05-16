@@ -7,5 +7,5 @@
  */
 package src.e3_3;
 
-class Forelle extends Fisch{
+class Forelle extends Fisch {
 }

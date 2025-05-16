@@ -7,5 +7,5 @@
  */
 package src.e3_3;
 
- class Fisch extends Tier {
+class Fisch extends Tier {
 }

@@ -1,4 +1,4 @@
-package src.e3_2;
+package lektion3.e3_2;
 
 class TestStapel {
     public static void main(String[] args) {
