@@ -1,4 +1,4 @@
-package src.e3_4;
+package lektion3.e3_4;
 
 class Pinguin extends Tier {
 

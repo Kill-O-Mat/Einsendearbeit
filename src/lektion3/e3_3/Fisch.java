@@ -5,7 +5,7 @@
  * @version 1.0
  * @created 16.04.2025
  */
-package src.e3_3;
+package lektion3.e3_3;
 
 class Fisch extends Tier {
 }
