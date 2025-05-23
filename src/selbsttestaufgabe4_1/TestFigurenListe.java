@@ -1,4 +1,4 @@
-package src.selbsttestaufgabe_1;
+package src.selbsttestaufgabe4_1;
 
 public class TestFigurenListe {
 
