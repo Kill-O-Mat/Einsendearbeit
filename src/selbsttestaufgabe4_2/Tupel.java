@@ -1,6 +1,6 @@
 package src.selbsttestaufgabe4_2;
 
-public class Tupel<E> {
+public class Tupel<E extends Druckbar> {
 
     public E left;
     public E right;
@@ -16,5 +16,10 @@ public class Tupel<E> {
 
     public E getRechts() {
         return this.right;
+    }
+
+    public void beideDrucken() {
+        this.left.drucken();
+        this.right.drucken();
     }
 }
