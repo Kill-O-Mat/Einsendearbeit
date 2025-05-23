@@ -6,7 +6,7 @@ Short description about the project.
 
 ## Table of Contents
 
-1. [Generische Medien-Klasse](#Generische Medien-Klassen)
+1. [Generische Medien-Klasse](#Generische-Medien-Klassen)
 2. [Generische Bibliothek](#teil_2)
 3. [Installation](#installation)
 4. [Usage](#usage)
