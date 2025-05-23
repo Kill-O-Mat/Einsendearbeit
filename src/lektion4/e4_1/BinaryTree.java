@@ -1,4 +1,4 @@
-package lektion4.e4_1;
+package src.lektion4.e4_1;
 
 public class BinaryTree {
     private BinaryNode root;
@@ -7,7 +7,7 @@ public class BinaryTree {
 
     public BinaryTree() { /* ... */ }
 
-    public boolean contains(int value) { /* ... */ }
+    public boolean contains(int value) { return true; /* ... */ }
 
     public void insert(int value) { /* ... */ }
 
